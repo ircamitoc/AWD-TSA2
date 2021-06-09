@@ -1,0 +1,240 @@
+<html>
+<head>
+  <title>Shape Animation</title>
+  <style>
+  body{
+    margin: 0;
+    padding: 0;
+    display: border-box;
+  }
+
+  .button{
+    height: 40px;
+    width: 120px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 6px;
+    font-size: 15px;
+    font-weight: 700px;
+    transition: all 0.25s ease-out;
+  }
+
+  .button:hover {
+    position: relative;
+    top: -3px;
+    box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
+  }
+
+  .btn-2{background: #ffa500;}
+  .btn-3{background: #ffea00; color: #000000;}
+  .btn-4{background: #008000;}
+  .btn-5{background: #0000ff;}
+  .btn-6{background: #4B0082;}
+  .btn-7{background: #7f00ff;}
+
+  #box{
+    margin-top: 30px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+    position: absolute;
+  }
+
+  #sundaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #ff0000;
+    animation: fade-in-move-down1 1s;
+  }
+
+  #mondaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #ffa500;
+    animation: fade-in-move-down2 1s;
+  }
+
+  #tuesdaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #ffea00;
+    animation: fade-in-move-down3 1s;
+  }
+
+  #wednesdaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #008000;
+    animation: fade-in-move-down4 1s;
+  }
+
+  #thursdaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #0000ff;
+    animation: fade-in-move-down5 1s;
+  }
+
+  #fridaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #4B0082;
+    animation: fade-in-move-down6 1s;
+  }
+
+  #saturdaybox{
+    margin-top: 70px;
+    margin-left: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid #7f00ff;
+    animation: fade-in-move-down7 1s;
+  }
+
+  @keyframes fade-in-move-down1 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down2 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down4 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down5 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down6 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-move-down7 {
+    0% {
+      opacity: 0;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<body>
+  <div class="container1">
+    <button class="button" onclick="sunday()">SUNDAY</button>
+    <button class="button btn-2" onclick="monday()">MONDAY</button>
+    <button class="button btn-3" onclick="tuesday()">TUESDAY</button>
+    <button class="button btn-4"  onclick="wednesday()">WEDNESDAY</button>
+    <button class="button btn-5" onclick="thursday()">THURSDAY</button>
+    <button class="button btn-6" onclick="friday()">FRIDAY</button>
+    <button class="button btn-7" onclick="saturday()">SATURDAY</button>
+  </div>
+  <div id="box"></div>
+  <script>
+  var div = document.getElementById("box");
+
+  function sunday(){
+    div.setAttribute("id", "sundaybox");
+  }
+
+  function monday(){
+    div.setAttribute("id", "mondaybox");
+  }
+
+  function tuesday(){
+    div.setAttribute("id", "tuesdaybox");
+  }
+
+  function wednesday(){
+    div.setAttribute("id", "wednesdaybox");
+  }
+
+  function thursday(){
+    div.setAttribute("id", "thursdaybox");
+  }
+
+  function friday(){
+    div.setAttribute("id", "fridaybox");
+  }
+
+  function saturday(){
+    div.setAttribute("id", "saturdaybox");
+  }
+  </script>
+</body>
+</html>
